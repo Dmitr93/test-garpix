@@ -1,20 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './store-categories.scss';
-
-import mvideoImg from '@img/mvideo.svg'
-import burgerKingImg from '@img/bk.svg'
-import borkImg from '@img/bork.svg'
-import tehnoparkImg from '@img/tehnopark.svg'
-import eurosetImg from '@img/euroset.svg'
+import { connect } from 'react-redux';
 
 
 
+function StoreCategories({cashback}) {
 
+    const [countCashback, setCountCashback] = useState(5);
+    const addCashback = () => {
+        setCountCashback (countCashback + 4)
+    };
 
+    const initCashback = cashback.slice(0,countCashback);
 
+    const renderCashback = initCashback.map((store, index) =>(
+        <div key={index} className="store-categories__partner-cashback">
+            <h4>{store.cashback}</h4>
+            <p>Спасибо от суммы покупки</p>
+            <img src={store.img} alt=""/>
+            <span>{store.shop}</span>
+        </div>
+    ));
 
-
-function StoreCategories() {
     return (
             <div className="store-categories">
                 <h3>Партнеры и предложения</h3>
@@ -39,44 +46,22 @@ function StoreCategories() {
                     <span className="store-categories__radio-button-text">Принимают спасибо</span>
                 </div>
                 <div className="store-categories__wrap-cashback">
-                    <div className="store-categories__partner-cashback store-categories__partner-cashback--first">
-                        <h4>1,5%</h4>
-                        <p>Спасибо от суммы покупки</p>
-                        <img src={mvideoImg} alt="logo M.Video"/>
-                        <span>М.Видео</span>
-                    </div>
-                    <div className="store-categories__partner-cashback">
-                        <h4>3%</h4>
-                        <p>Спасибо от суммы покупки</p>
-                        <img src={burgerKingImg} alt="logo Burger King"/>
-                        <span>Бургер Кинг </span>
-                    </div>
-                    <div className="store-categories__partner-cashback">
-                        <h4>4,5%</h4>
-                        <p>Спасибо от суммы покупки</p>
-                        <img src={tehnoparkImg} alt="logo Tehnopark"/>
-                        <span>Холодильник.ру</span>
-                    </div>
-                    <div className="store-categories__partner-cashback">
-                        <h4>1,5%</h4>
-                        <p>Спасибо от суммы покупки</p>
-                        <img src={borkImg} alt="logo Bork"/>
-                        <span>BORK</span>
-                    </div>
-                    <div className="store-categories__partner-cashback store-categories__partner-cashback--lust">
-                        <h4>1,5%</h4>
-                        <p>Спасибо от суммы покупки</p>
-                        <img src={eurosetImg} alt="logo Euroset"/>
-                        <span>Евросеть</span>
-                    </div>
+                    {renderCashback}
                 </div>
                 <div className="store-categories__btn">
-                    <button>Еще 4 партнера</button>
+                    {cashback.length >= countCashback &&
+                    <button onClick={addCashback}>Еще 4 партнера</button>
+                    }
                 </div>
             </div>
-
-
     );
 }
+function mapStateToProps (state) {
+    return {
+        cashback: state.partners.electronics.cashback,
+    };
+}
 
-export default StoreCategories;
+
+export default connect(mapStateToProps)(StoreCategories);
+

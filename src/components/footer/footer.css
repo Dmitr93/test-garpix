@@ -1,0 +1,99 @@
+.footer {
+  display: flex;
+  padding: 40px 0px 40px 0px;
+}
+.footer span {
+  color: darkgray;
+  font-size: 14px;
+  font-family: "Geometria";
+}
+
+.container__footer {
+  display: flex;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  margin-right: 95px;
+}
+.footer__contacts span {
+  width: max-content;
+}
+
+.footer__text-footer a {
+  color: darkgray;
+}
+
+.footer__logo-sberbank {
+  margin: 55px 0px 30px 0px;
+}
+
+.footer__store-and-social {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0px;
+}
+
+.footer__store, .footer__social {
+  display: flex;
+}
+.footer__store img, .footer__social img {
+  margin: 5px;
+  border-radius: 8px;
+}
+.footer__store img:hover, .footer__social img:hover {
+  -webkit-box-shadow: 3px 4px 12px 2px rgba(34, 60, 80, 0.48);
+  -moz-box-shadow: 3px 4px 12px 2px rgba(34, 60, 80, 0.48);
+  box-shadow: 3px 4px 12px 2px rgba(34, 60, 80, 0.48);
+  transition: 200ms;
+}
+
+.footer__nav-link {
+  display: flex;
+  margin-right: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+.footer__nav-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .footer__menu {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .container__footer {
+    flex-direction: column;
+  }
+
+  .footer__contacts {
+    margin-right: 0px;
+    align-items: center;
+  }
+
+  .footer__logo-sberbank {
+    margin: 15px 0px 10px 0px;
+  }
+
+  .footer__store-and-social {
+    margin: 15px 0px;
+  }
+
+  .footer__store-and-social {
+    flex-direction: column;
+  }
+
+  .footer__store, .footer__social {
+    justify-content: center;
+  }
+
+  .footer {
+    padding: 10px 0px 10px 0px;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

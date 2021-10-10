@@ -2,6 +2,7 @@ import React from 'react';
 import './coupons-certificates.scss';
 import ContactDetails from './contact-details';
 
+
 import applePicture from '@img/appleImg.svg';
 import appleLogo from '@img/applemusic.svg';
 import mapImg from '@img/mapimg.svg';

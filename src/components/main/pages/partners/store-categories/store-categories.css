@@ -1,0 +1,224 @@
+.store-categories {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.store-categories h3 {
+  font-size: 48px;
+}
+
+.store-categories__menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.store-categories__menu-item {
+  font-size: 18px;
+  padding: 6px 6px;
+  background: white;
+  border-radius: 8px;
+  margin: 4px;
+  color: black;
+  text-decoration: none;
+}
+.store-categories__menu-item:hover {
+  background: #00D36D;
+  color: white;
+  -webkit-box-shadow: 3px 3px 6px 2px rgba(34, 60, 80, 0.28);
+  -moz-box-shadow: 3px 83px 6px 2px rgba(34, 60, 80, 0.28);
+  box-shadow: 3px 3px 6px 2px rgba(34, 60, 80, 0.28);
+  transition: 400ms;
+}
+
+.store-categories__radio-button {
+  display: flex;
+}
+
+.store-categories__radio-button-text {
+  width: 80px;
+  text-align: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 24px;
+  margin: 15px 24px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border: 1px solid #E4E6E9;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 6px;
+  bottom: 2px;
+  background-color: #00D36D;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #00D36D;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: white;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.store-categories__wrap-cashback {
+  display: flex;
+  margin-top: 60px;
+}
+
+.store-categories__partner-cashback {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  margin: 0px 10px;
+  border-radius: 8px;
+  width: 218px;
+}
+.store-categories__partner-cashback h4 {
+  font-size: 24px;
+  margin: 20px 0px 4px 20px;
+}
+.store-categories__partner-cashback p {
+  color: darkgray;
+  font-size: 12px;
+  margin-left: 20px;
+}
+.store-categories__partner-cashback img {
+  margin: 27px 49px 35px 49px;
+}
+.store-categories__partner-cashback span {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.store-categories__partner-cashback:hover {
+  -webkit-box-shadow: 7px 8px 18px 2px rgba(34, 60, 80, 0.28);
+  -moz-box-shadow: 7px 8px 18px 2px rgba(34, 60, 80, 0.28);
+  box-shadow: 7px 8px 18px 2px rgba(34, 60, 80, 0.28);
+  transition: 200ms;
+}
+
+.store-categories__partner-cashback--first {
+  margin-left: 0px;
+}
+
+.store-categories__partner-cashback--lust {
+  margin-right: 0px;
+}
+
+.store-categories__btn {
+  margin-top: 40px;
+}
+.store-categories__btn button {
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  margin: 4px;
+  background: #00D36D;
+  color: white;
+  text-decoration: none;
+}
+.store-categories__btn button:hover {
+  opacity: 0.9;
+  -webkit-box-shadow: 3px 3px 6px 2px rgba(34, 60, 80, 0.28);
+  -moz-box-shadow: 3px 83px 6px 2px rgba(34, 60, 80, 0.28);
+  box-shadow: 3px 3px 6px 2px rgba(34, 60, 80, 0.28);
+  transition: 400ms;
+}
+
+@media (max-width: 1200px) {
+  .store-categories__wrap-cashback {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .store-categories__partner-cashback {
+    width: 25%;
+    margin: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .store-categories h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .store-categories__menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .store-categories__menu .store-categories__menu-item {
+    font-size: 14px;
+  }
+
+  .store-categories__radio-button-text {
+    font-size: 14px;
+  }
+
+  .store-categories__wrap-cashback {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .store-categories__partner-cashback {
+    width: 45%;
+    margin: 5px;
+  }
+
+  .store-categories__partner-cashback h4 {
+    margin: 5px 5px;
+  }
+  .store-categories__partner-cashback img {
+    margin: 35px 45px 35px 45px;
+  }
+
+  .store-categories__btn {
+    margin-top: 20px;
+  }
+  .store-categories__btn button {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=store-categories.css.map */

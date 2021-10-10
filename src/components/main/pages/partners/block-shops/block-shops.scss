@@ -13,12 +13,13 @@
 
 .block-shops__sale-cards{
   display: flex;
+  flex-wrap: wrap;
 }
 .block-shops__sale-item{
   display: flex;
   flex-direction: column;
-  width: 33.33%;
-  margin: 0px 10px;
+  width: 32%;
+  margin: 5px 5px;
   border-radius: 8px;
   &:hover{
     .block-shops__sale-item-img{
@@ -35,13 +36,13 @@
   margin: 0px;
 }
 
-.block-shops__sale-item--first{
-  margin-left: 0px;
-}
-
-.block-shops__sale-item--lust{
-  margin-right: 0px;
-}
+//.block-shops__sale-item--first{
+//  margin-left: 0px;
+//}
+//
+//.block-shops__sale-item--lust{
+//  margin-right: 0px;
+//}
 
 .block-shops__sale-item-description{
   display: flex;
@@ -66,6 +67,7 @@
 .block-shops__btn {
   margin-top: 40px;
   button {
+    cursor: pointer;
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 8px;

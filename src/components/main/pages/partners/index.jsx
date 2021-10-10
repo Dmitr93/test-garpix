@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './partners.scss';
 import StoreCategories from './store-categories'
 import BlockShops from './block-shops'
@@ -18,4 +19,4 @@ function Partners() {
     );
 }
 
-export default Partners;
+export default  Partners;
