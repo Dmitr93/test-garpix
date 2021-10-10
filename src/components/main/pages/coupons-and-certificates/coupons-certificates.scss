@@ -1,0 +1,156 @@
+.coupons-certificates{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px 120px 0px;
+}
+
+.coupons-certificates__link-chapter{
+  a{
+    color: #7E7E7E;
+    font-size: 14px;
+  }
+}
+
+.coupons-certificates__title{
+  text-align: center;
+  font-size: 48px;
+  margin: 21px 0px 41px 0px;
+}
+
+.coupons-certificates__content{
+  background: #FFFFFF;
+  border-radius: 30px 30px 8px 8px;
+}
+
+.coupons-certificates__content-text{
+  padding: 20px 50px 50px 50px;
+  p{
+    font-size: 18px;
+  }
+}
+
+.coupons-certificates__subtitle{
+  text-align: center;
+color: RGBA(0,0,0,0.5);
+padding-bottom: 40px;
+}
+
+.coupons-certificates__bonus-list-wrap{
+  p{
+    padding-bottom: 14px;
+  }
+}
+
+.coupons-certificates__bonus-list{
+  li {
+    line-height: 200%;
+    list-style-type: none;
+    //color: RGBA(0,0,0,0.5);
+  }
+  li:before {
+    padding-left: 25px;
+    color: RGBA(0,0,0,0.5);
+    content: "•";
+    padding-right: 10px;
+  }
+}
+
+.coupons-certificates__conditions{
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  a{
+    color: #00D36D;
+  }
+  p{
+    margin-bottom: 14px;
+  }
+  h1{
+    font-family: 'Geometria-Bold';
+    font-size: 18px;
+  }
+  ol{
+    line-height: 200%;
+    margin-bottom: 30px;
+  }
+  span{
+    font-size: 12px;
+    margin-top: 58px;
+    color: RGBA(0,0,0,0.5);
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+.coupons-certificates__link-doc{
+  margin: 7px 0px;
+}
+
+.coupons-certificates__apple-logo{
+  display: flex;
+  align-items: center;
+  margin: 50px 0px;
+  h3{
+    margin-left: 15px;
+  }
+}
+
+.coupons-certificates__address-block{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.coupons-certificates__map{
+  img {
+    border-radius: 8px;
+  }
+}
+
+
+//media
+
+@media (max-width : 1200px){
+  .coupons-certificates__apple-logo{
+    justify-content: center;
+    margin: 10px 0px;
+
+  }
+  .coupons-certificates__address-block{
+    flex-direction: column;
+    align-items: center
+  }
+}
+
+@media (max-width : 768px){
+  .coupons-certificates__contacts{
+    padding: 0px 10px;
+  }
+  .coupons-certificates__title{
+    font-size: 20px;
+    margin: 10px 0px 15px 0px;
+  }
+  .coupons-certificates{
+    padding: 20px 0px 20px 0px;
+  }
+  .coupons-certificates__content-text{
+    padding: 10px 10px 10px 10px;
+    p{
+      font-size: 14px;
+    }
+  }
+  .coupons-certificates__apple-logo{
+    justify-content: center;
+  }
+  .coupons-certificates__map{
+    img {
+      height: 320px;
+    }
+  }
+  .coupons-certificates__address-block{
+    margin-bottom: 10px;
+  }
+}
